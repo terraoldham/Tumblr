@@ -13,6 +13,12 @@
 		0CB395731A10298C007DA961 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB395721A10298C007DA961 /* Images.xcassets */; };
 		0CB395761A10298C007DA961 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB395741A10298C007DA961 /* LaunchScreen.xib */; };
 		0CB395821A10298D007DA961 /* TumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB395811A10298D007DA961 /* TumblrTests.swift */; };
+		0CB3958C1A102E31007DA961 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3958B1A102E31007DA961 /* TabBarViewController.swift */; };
+		0CB3958E1A1034B4007DA961 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3958D1A1034B4007DA961 /* HomeViewController.swift */; };
+		0CB395901A1035C2007DA961 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3958F1A1035C2007DA961 /* SearchViewController.swift */; };
+		0CB395921A1036AD007DA961 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB395911A1036AD007DA961 /* ComposeViewController.swift */; };
+		0CB395941A10377B007DA961 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB395931A10377B007DA961 /* AccountViewController.swift */; };
+		0CB395961A10388C007DA961 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB395951A10388C007DA961 /* TrendingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		0CB3957B1A10298D007DA961 /* TumblrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumblrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB395801A10298D007DA961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB395811A10298D007DA961 /* TumblrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrTests.swift; sourceTree = "<group>"; };
+		0CB3958B1A102E31007DA961 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0CB3958D1A1034B4007DA961 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0CB3958F1A1035C2007DA961 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0CB395911A1036AD007DA961 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		0CB395931A10377B007DA961 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		0CB395951A10388C007DA961 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,12 @@
 				0CB3956B1A10298C007DA961 /* AppDelegate.swift */,
 				0CB3956D1A10298C007DA961 /* ViewController.swift */,
 				0CB3956F1A10298C007DA961 /* Main.storyboard */,
+				0CB395951A10388C007DA961 /* TrendingViewController.swift */,
+				0CB395931A10377B007DA961 /* AccountViewController.swift */,
+				0CB395911A1036AD007DA961 /* ComposeViewController.swift */,
+				0CB3958F1A1035C2007DA961 /* SearchViewController.swift */,
+				0CB3958D1A1034B4007DA961 /* HomeViewController.swift */,
+				0CB3958B1A102E31007DA961 /* TabBarViewController.swift */,
 				0CB395721A10298C007DA961 /* Images.xcassets */,
 				0CB395741A10298C007DA961 /* LaunchScreen.xib */,
 				0CB395691A10298C007DA961 /* Supporting Files */,
@@ -212,8 +230,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB395901A1035C2007DA961 /* SearchViewController.swift in Sources */,
+				0CB395961A10388C007DA961 /* TrendingViewController.swift in Sources */,
 				0CB3956E1A10298C007DA961 /* ViewController.swift in Sources */,
+				0CB395941A10377B007DA961 /* AccountViewController.swift in Sources */,
+				0CB3958C1A102E31007DA961 /* TabBarViewController.swift in Sources */,
+				0CB395921A1036AD007DA961 /* ComposeViewController.swift in Sources */,
 				0CB3956C1A10298C007DA961 /* AppDelegate.swift in Sources */,
+				0CB3958E1A1034B4007DA961 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
