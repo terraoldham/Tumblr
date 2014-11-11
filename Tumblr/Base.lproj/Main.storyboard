@@ -55,6 +55,9 @@
                                         <state key="normal" image="compose_button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Bsd-Qv-pl9" kind="modal" identifier="segue" id="mkd-lB-Wlh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7bl-lo-8mg" userLabel="Trending">
                                         <rect key="frame" x="277" y="4" width="35" height="35"/>
@@ -70,7 +73,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.18823531270027161" green="0.25490197539329529" blue="0.34117648005485535" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="ImC-Yj-Y2r" userLabel="contentView">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="ImC-Yj-Y2r" userLabel="contentView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,15 +103,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" id="9Mr-1T-KI0" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_spinner" id="OsJ-lg-d6O" userLabel="Spinner">
-                                <rect key="frame" x="87" y="180" width="146" height="146"/>
+                                <rect key="frame" x="87" y="162" width="146" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_overlay" id="Eht-7h-uP1" userLabel="Text">
-                                <rect key="frame" x="0.0" y="280" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="262" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -172,13 +175,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vR7-kg-hyh" userLabel="Link">
-                                <rect key="frame" x="16" y="297" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="link_icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m9N-iS-7Pg" userLabel="Chat">
                                 <rect key="frame" x="123" y="297" width="75" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -193,9 +189,34 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ATw-Gd-bEl">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nevermindButton:" destination="Bsd-Qv-pl9" eventType="touchUpInside" id="vfl-Us-ETY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vR7-kg-hyh" userLabel="Link">
+                                <rect key="frame" x="16" y="297" width="75" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="link_icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19215688110000001" green="0.26666668059999998" blue="0.36470589040000001" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chatButton" destination="m9N-iS-7Pg" id="AuO-h4-TFR"/>
+                        <outlet property="linkButton" destination="vR7-kg-hyh" id="wcc-s3-cpf"/>
+                        <outlet property="photoButton" destination="giW-Wh-Iia" id="phr-PL-2DO"/>
+                        <outlet property="quoteButton" destination="eB0-GP-CPz" id="5P4-Vd-cHo"/>
+                        <outlet property="textButton" destination="buY-Ei-GuW" id="Njb-gM-HCf"/>
+                        <outlet property="videoButton" destination="YWO-RN-Eau" id="2tw-Y5-TBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSM-xg-L7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,7 +266,7 @@
                                 <color key="backgroundColor" red="0.21176472306251526" green="0.28627452254295349" blue="0.38039219379425049" alpha="1" colorSpace="deviceRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19215688110000001" green="0.26666668059999998" blue="0.36470589040000001" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="gWJ-F8-bp7" id="Pni-Ub-wxI"/>

@@ -28,10 +28,27 @@ class TabBarViewController: UIViewController {
         currentButton.selected = false
         currentButton = sender
         currentButton.selected = true
+        currentViewController.view.removeFromSuperview()
+    
+        switch (currentButton.tag) {
+        case 2:
+            //Search View Controller
+            currentViewController = searchViewController
+            break;
+        case 3:
+            //Account View Controller
+            currentViewController = accountViewController
+            break;
+        case 4:
+            //Trending View Controller
+            currentViewController = trendingViewController
+            break;
+        default:
+            currentViewController = homeViewController
+        }
         
-        //contentView.addSubview(<#view: UIView#>)
-        
-        
+        contentView.addSubview(currentViewController.view)
+
         
     }
     
@@ -39,17 +56,16 @@ class TabBarViewController: UIViewController {
         super.viewDidLoad()
         
         homeViewController = storyboard?.instantiateViewControllerWithIdentifier("Home") as UIViewController
-        self.addChildViewController(homeViewController)
-        
+        //self.addChildViewController(homeViewController)
         
         searchViewController = storyboard?.instantiateViewControllerWithIdentifier("Search") as UIViewController
-        self.addChildViewController(searchViewController)
+        //self.addChildViewController(searchViewController)
         
         accountViewController = storyboard?.instantiateViewControllerWithIdentifier("Account") as UIViewController
-        self.addChildViewController(accountViewController)
+        //self.addChildViewController(accountViewController)
         
         trendingViewController = storyboard?.instantiateViewControllerWithIdentifier("Trending") as UIViewController
-        self.addChildViewController(trendingViewController)
+        //self.addChildViewController(trendingViewController)
         
         currentButton = homeButton
         currentViewController = homeViewController
