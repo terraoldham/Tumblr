@@ -17,8 +17,44 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var composeButton: UIButton!
     @IBOutlet weak var contentView: UIView!
     
+    var homeViewController: UIViewController!
+    var searchViewController: UIViewController!
+    var accountViewController: UIViewController!
+    var trendingViewController: UIViewController!
+    var currentButton: UIButton!
+    var currentViewController: UIViewController!
+    
+    @IBAction func onTabClick(sender: UIButton) {
+        currentButton.selected = false
+        currentButton = sender
+        currentButton.selected = true
+        
+        //contentView.addSubview(<#view: UIView#>)
+        
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        homeViewController = storyboard?.instantiateViewControllerWithIdentifier("Home") as UIViewController
+        self.addChildViewController(homeViewController)
+        
+        
+        searchViewController = storyboard?.instantiateViewControllerWithIdentifier("Search") as UIViewController
+        self.addChildViewController(searchViewController)
+        
+        accountViewController = storyboard?.instantiateViewControllerWithIdentifier("Account") as UIViewController
+        self.addChildViewController(accountViewController)
+        
+        trendingViewController = storyboard?.instantiateViewControllerWithIdentifier("Trending") as UIViewController
+        self.addChildViewController(trendingViewController)
+        
+        currentButton = homeButton
+        currentViewController = homeViewController
+        contentView.addSubview(homeViewController.view)
+        
     }
+
 }
