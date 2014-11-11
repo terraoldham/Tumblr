@@ -146,14 +146,20 @@
         <scene sceneID="Ger-F7-bHv">
             <objects>
                 <viewController storyboardIdentifier="Compose" id="Bsd-Qv-pl9" userLabel="ComposeViewController" customClass="ComposeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.74999999999999978" contentMode="scaleToFill" id="gZP-XB-yU3">
+                    <view key="view" opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" id="gZP-XB-yU3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nevermind" id="heW-Rg-v7L">
-                                <rect key="frame" x="0.0" y="515" width="320" height="53"/>
+                            <view alpha="0.69999999999999973" contentMode="scaleToFill" id="NLx-6D-NQ9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" red="0.19215688110000001" green="0.26666668059999998" blue="0.36470589040000001" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="3b1-xi-qyR">
+                                <rect key="frame" x="0.0" y="515" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19215688110000001" green="0.26666668059999998" blue="0.36470589040000001" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="buY-Ei-GuW" userLabel="Text Button">
                                 <rect key="frame" x="16" y="181" width="75" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -189,8 +195,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vR7-kg-hyh" userLabel="Link">
+                                <rect key="frame" x="16" y="297" width="75" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="link_icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nevermind" id="heW-Rg-v7L">
+                                <rect key="frame" x="0.0" y="510" width="320" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ATw-Gd-bEl">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <rect key="frame" x="11" y="510" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,19 +216,17 @@
                                     <action selector="nevermindButton:" destination="Bsd-Qv-pl9" eventType="touchUpInside" id="vfl-Us-ETY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vR7-kg-hyh" userLabel="Link">
-                                <rect key="frame" x="16" y="297" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="link_icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.19215688110000001" green="0.26666668059999998" blue="0.36470589040000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="NLx-6D-NQ9" id="X3I-nl-2hT"/>
                         <outlet property="chatButton" destination="m9N-iS-7Pg" id="AuO-h4-TFR"/>
+                        <outlet property="imageView" destination="3b1-xi-qyR" id="0c7-HS-2E4"/>
                         <outlet property="linkButton" destination="vR7-kg-hyh" id="wcc-s3-cpf"/>
+                        <outlet property="nevermindButton" destination="ATw-Gd-bEl" id="vaT-jG-lyG"/>
+                        <outlet property="nevermindImageView" destination="heW-Rg-v7L" id="NrF-2F-ivl"/>
+                        <outlet property="nevermindView" destination="3b1-xi-qyR" id="GaU-w3-ZqW"/>
                         <outlet property="photoButton" destination="giW-Wh-Iia" id="phr-PL-2DO"/>
                         <outlet property="quoteButton" destination="eB0-GP-CPz" id="5P4-Vd-cHo"/>
                         <outlet property="textButton" destination="buY-Ei-GuW" id="Njb-gM-HCf"/>
